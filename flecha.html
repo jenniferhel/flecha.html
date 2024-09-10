@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sou eu bola de fogo</title>
+</head>
+<body>
+    <p id='texto'> clique no botão 2x para mudar o texto</p>
+    <button id= 'botao'>clique aqui</button>
+
+    <script>
+        const botao = document.getElementById('botao')
+        const texto = document.getElementById('texto')
+
+        botao.addEventListener('click',() => { 
+            texto.textContent = 'clique de novo!';
+
+            botao.addEventListener('click',() => {
+                texto.textContent = 'voce clicou de novo!';
+            })
+
+   
+        })
+
+    </script>
+</body>
+</html>
